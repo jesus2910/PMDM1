@@ -5,6 +5,7 @@ fun main() {
     printStringLength("This is a test")
     printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
+    exercise1()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -12,6 +13,11 @@ fun main() {
 // println() and invoke it from main().
 // Look for how to make a “for” loop here:
 // https://kotlinlang.org/docs/reference/control-flow.html
+
+fun exercise1(){
+    for(i in 1..10)
+        print("$i ")
+}
 
 // TODO: 2.- Uncomment this function:
 /* fun exercise2() {
