@@ -9,7 +9,7 @@ fun main() {
     //println("Concatenation: " + concatenate("hello", null))
 
 
-
+    printStringLength(null)
 
 
 
@@ -128,6 +128,13 @@ fun assignReadersToBooks() {
 // If the string is null, print 0
 fun printStringLength(string: String?) {
 
+    val stringLength = string?.length
+    if (stringLength != null) {
+
+        println("The length of the indicated text is: " + stringLength)
+    }else{
+        println("The length of this null text is: 0 ")
+    }
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
