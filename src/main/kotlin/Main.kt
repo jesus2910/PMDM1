@@ -1,3 +1,5 @@
+import com.sun.xml.internal.fastinfoset.util.StringArray
+
 fun main() {
     println("Hello World.")
     println("number of a's = " + countAs("Mary got married"))
@@ -5,7 +7,7 @@ fun main() {
     printStringLength("This is a test")
     printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
-    exercise2()
+    exercise3()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -50,10 +52,40 @@ fun exercise1(){
 }
 
 // TODO: 3 Write a function called exercise3()
+
+fun exercise3(){
+
+    val arr = arrayOf<String>("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
+    println("Enter NIF number without letter: ")
+    val nifStr= readLine().toString()
+    val num = nifStr.toInt()
+    val rest = num % 23
+    val letter = arr[rest]
+    println("Number and letter of NIF is:" + num + letter)
+}
+
 // that accepts a  number and returns a String
 // that represents the corresponding NIF (number + letter)
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
