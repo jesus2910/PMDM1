@@ -8,8 +8,7 @@ fun main() {
     //printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
 
-    println(countAs("aaa"))
-    exercise5("aaaaa")
+
 
 
 
@@ -111,7 +110,7 @@ fun exercise5(str : String){
 
 
 data class Reader(val name: String, val age: Int)
-data class Book(val title: String, val reader: Reader)
+data class Book(val title: String, var reader: Reader)
 // TODO 6: Create a data class Book that has 2 parameters
 // title as a String that can not be modified (read only)
 // and reader as a Reader
@@ -128,7 +127,7 @@ fun assignReadersToBooks() {
 // That prints the length of the string parameter.
 // If the string is null, print 0
 fun printStringLength(string: String?) {
-    // Body
+
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
