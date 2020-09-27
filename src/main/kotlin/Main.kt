@@ -1,13 +1,18 @@
 import com.sun.xml.internal.fastinfoset.util.StringArray
 
 fun main() {
-    println("Hello World.")
-    println("number of a's = " + countAs("Mary got married"))
-    assignReadersToBooks()
-    printStringLength("This is a test")
-    printStringLength(null)
+    //println("Hello World.")
+    //println("number of a's = " + countAs("Mary got married"))
+    //assignReadersToBooks()
+    //printStringLength("This is a test")
+    //printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
-    exercise3()
+
+    println(countAs("aaa"))
+
+
+
+
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -70,36 +75,21 @@ fun exercise3(){
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
 // https://developer.android.com/kotlin/learn#simplifying
 // Note: You can remove the : Int in the declaration
-fun countAs(str: String): Int {
-    val count = str.count { c -> c == 'a' }
-    return count
-}
+fun countAs(str: String) = str.count { c -> c == 'a' }
 
+//fun countAsOld(str: String): Int {
+//    val count = str.count { c -> c == 'a' }
+//    return count
+//}
 
 fun stringMapper(str: String, mapper: (String) -> Int): Int {
     return mapper(str)
 }
+
 // TODO 5: Write a function called exercise5()
 // In it you will invoke the function stringMapper declared above twice.
 // The first one with a function that returns the number of characters
