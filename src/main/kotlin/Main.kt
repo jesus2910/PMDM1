@@ -9,6 +9,7 @@ fun main() {
     //println("Concatenation: " + concatenate("hello", null))
 
     println(countAs("aaa"))
+    exercise5("aaaaa")
 
 
 
@@ -86,15 +87,27 @@ fun countAs(str: String) = str.count { c -> c == 'a' }
 //    return count
 //}
 
-fun stringMapper(str: String, mapper: (String) -> Int): Int {
-    return mapper(str)
-}
+fun stringMapper(str: String, mapper: (String) -> Int) = mapper(str)
+
+//fun stringMapperOld(str: String, mapper: (String) -> Int): Int {
+//    return mapper(str)
+//}
 
 // TODO 5: Write a function called exercise5()
 // In it you will invoke the function stringMapper declared above twice.
 // The first one with a function that returns the number of characters
 // and the second one with a function that returns the number of a’s.
 // Print its results.
+
+
+fun exercise5(str : String){
+
+    println("Number of characters: " + stringMapper(str) { str -> str.length })
+
+    println("Number of a: " + stringMapper(str) { str -> str.count { c -> c == 'a' } })
+
+    }
+
 
 
 data class Reader(val name: String, val age: Int)
