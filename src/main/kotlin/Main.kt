@@ -36,7 +36,7 @@ fun exercise1(){
                 2 -> println("The entered month has 28 or 29 days.")
                 0 -> System.exit(0)
                 else -> {
-                    println("Please enter a valid number.")
+                    println("Please enter a valid number. ")
                     exercise2()
                 }
             }
