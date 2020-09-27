@@ -111,6 +111,7 @@ fun exercise5(str : String){
 
 
 data class Reader(val name: String, val age: Int)
+data class Book(val title: String, val reader: Reader)
 // TODO 6: Create a data class Book that has 2 parameters
 // title as a String that can not be modified (read only)
 // and reader as a Reader
@@ -118,8 +119,9 @@ fun assignReadersToBooks() {
     val reader1 = Reader("John", 23)
     val reader2 = Reader("Mary", 34)
     // TODO 6: Uncomment these sentences
-    // val book1 = Book("The name of the wind", reader1)
-    // book1.reader = reader2
+     val book1 = Book("The name of the wind", reader1)
+        book1.reader = reader2
+
 }
 
 // TODO 7: Write the body of this function
