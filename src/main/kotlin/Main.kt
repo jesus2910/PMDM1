@@ -1,15 +1,15 @@
 import com.sun.xml.internal.fastinfoset.util.StringArray
 
 fun main() {
-    //println("Hello World.")
-    //println("number of a's = " + countAs("Mary got married"))
-    //assignReadersToBooks()
-    //printStringLength("This is a test")
-    //printStringLength(null)
-    //println("Concatenation: " + concatenate("hello", null))
-
-
+    println("Hello World.")
+    println("number of a's = " + countAs("Mary got married"))
+    assignReadersToBooks()
+    printStringLength("This is a test")
     printStringLength(null)
+    println("Concatenation: " + concatenate("hello", null))
+
+
+
 
 
 
@@ -142,3 +142,6 @@ fun printStringLength(string: String?) {
 // If a String is null, convert it to “”.
 // This is the invocation:
 // println("Concatenation: " + concatenate("hello", null))
+fun concatenate(str1: String?,str2: String?): String{
+    return (str1 ?: "“”") + (str2 ?: "“”")
+}
