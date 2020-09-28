@@ -9,7 +9,7 @@ fun main() {
     println("Concatenation: " + concatenate("hello", null))
 
 
-
+    print(exercise3(12345678))
 
 
 
@@ -58,15 +58,21 @@ fun exercise1(){
 
 // TODO: 3 Write a function called exercise3()
 
-fun exercise3(){
-
-    val arr = arrayOf<String>("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
+fun exercise3(num: Int): String{
+    //Old exercise
+   /* val arr = arrayOf<String>("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
     println("Enter NIF number without letter: ")
     val nifStr= readLine().toString()
     val num = nifStr.toInt()
     val rest = num % 23
     val letter = arr[rest]
-    println("Number and letter of NIF is:" + num + letter)
+    return("$num$letter");
+    */
+    val arr = arrayOf<String>("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
+
+    val rest = num % 23
+    val letter = arr[rest]
+    return("$num$letter");
 }
 
 // that accepts a  number and returns a String
@@ -129,12 +135,10 @@ fun assignReadersToBooks() {
 fun printStringLength(string: String?) {
 
     val stringLength = string?.length
-    if (stringLength != null) {
+    println("The length of the indicated text is: " + (stringLength ?: 0))
 
-        println("The length of the indicated text is: " + stringLength)
-    }else{
-        println("The length of this null text is: 0 ")
-    }
+
+
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
@@ -143,5 +147,5 @@ fun printStringLength(string: String?) {
 // This is the invocation:
 // println("Concatenation: " + concatenate("hello", null))
 fun concatenate(str1: String?,str2: String?): String{
-    return (str1 ?: "“”") + (str2 ?: "“”")
+    return (str1 ?: "") + (str2 ?: "")
 }
