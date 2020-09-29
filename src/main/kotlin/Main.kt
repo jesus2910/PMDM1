@@ -134,8 +134,11 @@ fun assignReadersToBooks() {
 // If the string is null, print 0
 fun printStringLength(string: String?) {
 
-    val stringLength = string?.length
-    println("The length of the indicated text is: " + (stringLength ?: 0))
+    //Old Exercise 7
+    // val stringLength = string?.length
+    //println("The length of the indicated text is: " + (stringLength ?: 0))
+
+    println("The length of the indicated text is: " + (string?.length ?: 0))
 
 
 
